@@ -1,38 +1,67 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.board {
+  --grid-size: 4; /* Start with 4x4 */
+  display: grid;
+  width: 25rem;
+  height: 25rem;
+  grid-template: repeat(var(--grid-size), 1fr) / repeat(var(--grid-size), 1fr);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.square {
+  border: 1px solid black;
+  display: grid;
+  place-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.my-button {
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-.App-link {
-  color: #61dafb;
+table ,td,tr{
+  border: 1px solid black
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.square2 {
+  border: 1px solid gray;
+  background-color: black;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.numerador {
+  position: absolute;
+  bottom: 14rem;
+  left: 2rem;
+}
+.botones {
+  position: absolute;
+  bottom: 12rem;
+}
+
+.boton-negro , .boton-verde , .boton-azul {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+}
+
+.boton-negro{
+  background-color: black;
+  left: 4rem;
+}
+.boton-verde{
+  background-color: green;
+  left: 6rem;
+}
+.boton-azul{
+  background-color: blue;
+  left: 8rem;
 }
